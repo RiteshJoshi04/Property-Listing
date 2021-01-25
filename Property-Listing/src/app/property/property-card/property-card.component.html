@@ -17,11 +17,19 @@
     </ul>
   </div>
   <div class="card-body p-1">
-    <h1>{{ property.Name }}</h1>
-    <h2>{{ property.Type }}</h2>
-    <!-- <h3>{{ property.Price | currencyFormat | indianFormat }}</h3> -->
-    <h3>
-      <div [innerHtml]="property.Price | currencyFormat"></div>
-    </h3>
+    <h1 class="mb-0">{{ property.BHK }} BHK {{property.PType}}</h1>
+    in {{property.Name}}
+    <span *ngIf="property.Name">,</span>{{property.City}}
+
+    <h6 class="mt-2">{{ property.FType }}
+      <span *ngIf="property.FType !=='Unfurnished'"></span> | Ready to Move
+    </h6>
+
+    <hr class="mt-0 mb-2">
+
+    <h6 class="mb-0">
+      Price: <span [innerHtml]="property.Price | currencyFormat" *ngIf="property.Price"></span> |
+       Area: <span class="font-highlight">{{property.BuiltArea}}</span> <span *ngIf="property.BuiltArea"> Sq Ft.</span>
+    </h6>
   </div>
 </div>

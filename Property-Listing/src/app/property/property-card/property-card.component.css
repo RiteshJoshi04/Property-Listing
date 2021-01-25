@@ -2,6 +2,15 @@
   min-height: 400px;
 }
 
+.card-body h1{
+  font-family: fantasy;
+  color: #0069d9;
+}
+
+.font-highlight{
+  color: red;
+}
+
 .card-img-wrapper{
   overflow: hidden;
   position: relative;

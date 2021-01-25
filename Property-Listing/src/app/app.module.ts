@@ -17,14 +17,11 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HousingService } from './services/housing.service';
 import { AddPropertyComponent } from './property/add-property/add-property.component';
 import { PropertyDetailComponent } from './property/property-detail/property-detail.component';
-import { ErrorPageComponent } from './error-page/error-page.component';
 import { UserLoginComponent } from './user/user-login/user-login.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
 import { UserService } from './services/user.service';
 import { CurrencyFormatPipe } from './pipes/currency-format.pipe';
-import { StudentListComponent } from './student-list/student-list.component';
 import { DataTableComponent } from './shared/data-table/data-table.component';
-import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { AlertifyService } from './services/alertify.service';
 import { AuthService } from './services/auth.service';
 
@@ -35,8 +32,6 @@ const appRoutes: Routes = [
   { path: 'property-detail/:id', component: PropertyDetailComponent },
   { path: 'user/login', component: UserLoginComponent },
   { path: 'user/register', component: UserRegisterComponent },
-  { path: 'employee', component: EmployeeListComponent },
-  {path: 'student', component: StudentListComponent },
   { path: '**', component: PropertyListComponent },
 ];
 
@@ -48,13 +43,10 @@ const appRoutes: Routes = [
     NavBarComponent,
     AddPropertyComponent,
     PropertyDetailComponent,
-    ErrorPageComponent,
     UserLoginComponent,
     UserRegisterComponent,
     CurrencyFormatPipe,
-    StudentListComponent,
     DataTableComponent,
-    EmployeeListComponent,
   ],
   imports: [
     BrowserModule,

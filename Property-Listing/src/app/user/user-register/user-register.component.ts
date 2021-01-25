@@ -75,7 +75,9 @@ export class UserRegisterComponent implements OnInit {
       this.userService.addUser(this.userData());
       this.registrationForm.reset();
       this.userSubmitted = false;
-      this.alertify.success('Congratulations!! you are successfully registered');
+      this.alertify.success(
+        'Congratulations!! you are successfully registered'
+      );
     } else {
       this.alertify.error('Kindly provide the required fields');
     }
